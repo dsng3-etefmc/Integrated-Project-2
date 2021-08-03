@@ -20,7 +20,7 @@ Escola: ETE FMC - https://www.etefmc.com.br/
 
 Curso: Desenvolvimento de Sistemas - Games  - https://www.etefmc.com.br/curso-de-desenvolvimento-de-sistemas
 
-## Instalação:
+## Passo a passo para instalação:
 
 * Baixe o Unity 2D em seu computador
 * Clone o repositório
