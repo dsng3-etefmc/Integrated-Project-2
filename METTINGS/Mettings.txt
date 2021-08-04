@@ -1,0 +1,12 @@
+Reunião 03/08 
+Presentes: Nydia, Marcus Vinicius, Gabriel Feliciano, Antônio, Giovana e Danilo.
+Assunto da reunião: 
+-Criação do repositório.
+-Início do Projeto Integrado do 2° Trimestre.
+
+Reunião 04/08 
+Presentes: Nydia, Marcus Vinicius, Gabriel Feliciano, Antônio, Giovana e Danilo.
+Assunto da reunião:
+-Escolha do Top Down do jogo.
+-Inicio do desenvolvimento do cenário 1 do projeto (1° fase).
+-Desenvolvendo o Menu do jogo.
