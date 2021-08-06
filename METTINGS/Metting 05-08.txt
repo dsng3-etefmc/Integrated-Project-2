@@ -1,0 +1,7 @@
+Reunião 05/08 
+Presentes: Nydia, Marcus Vinicius, Gabriel Feliciano, Antônio, e Danilo.
+Assunto da reunião:
+-Divisões das funções de cada integrante do grupo.
+-Iniciamos o Mapa Mental conduzido pelo Prof Taero sobre o projeto integrado.
+-Encontramos uma sprite para o personagem.
+-Mudamos para um novo assets.
