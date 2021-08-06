@@ -8,6 +8,12 @@ public class PlayerMoviment : MonoBehaviour {
     CharacterController controller;
     public float walkingSpeed;
     public float animationBreakpoint = .1f;
+    enum PlayerMovement {
+        Positive = 1,
+        Null = 0,
+        Negative = -1
+    }
+    enum PlayerDirection { Left, Right, Null }
 
     // Start is called before the first frame update
     void Start() {
@@ -20,12 +26,6 @@ public class PlayerMoviment : MonoBehaviour {
         this.HandleInput();
     }
 
-    enum PlayerMovement {
-        Positive,
-        Null,
-        Negative
-    }
-
     void HandleInput() {
         var inputX = Input.GetAxis(axisName: "Horizontal");
         var inputY = Input.GetAxis(axisName: "Vertical");
@@ -33,12 +33,26 @@ public class PlayerMoviment : MonoBehaviour {
         var input = new Vector3(inputX, inputY, 0);
         var deltaTime = Time.deltaTime;
 
-        // this.controller.Move(input * deltaTime * walkingSpeed);
+        this.controller.Move(input * deltaTime * walkingSpeed);
 
         this.SetAnimation(
             InputToMovement(inputX),
             InputToMovement(inputY)
         );
+    }
+
+    PlayerDirection getDirection() {
+        return Mathf.Sign(transform.localScale.x) == 1
+        ? PlayerDirection.Left
+        : PlayerDirection.Right
+    ;}
+
+    void turnCharacterToDirection (PlayerDirection playerNewDirection) {
+        print(playerNewDirection + ":" + this.getDirection());
+        var shouldFlip = this.getDirection() != playerNewDirection && playerNewDirection != PlayerDirection.Null;
+        print(shouldFlip);
+        var x = (shouldFlip ? -1 : 1) * transform.localScale.x;
+        transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
     }
 
     PlayerMovement InputToMovement(float input) {
@@ -57,23 +71,19 @@ public class PlayerMoviment : MonoBehaviour {
         PlayerMovement playerMovementX, 
         PlayerMovement playerMovementY
     ) {
-
         var up = playerMovementY == PlayerMovement.Positive;
         var right = playerMovementX == PlayerMovement.Positive;
         var down = playerMovementY == PlayerMovement.Negative;
         var left = playerMovementX == PlayerMovement.Negative;
 
+        var direction = right ? PlayerDirection.Right : PlayerDirection.Null;
+        direction = left ? PlayerDirection.Left : direction;
+        this.turnCharacterToDirection(direction);
+
         this.animator.SetBool("up", up);
-        this.animator.SetBool("right", right);
         this.animator.SetBool("down", down);
-        this.animator.SetBool("left", left);
-        // print(playerMovementX + ":" + playerMovementY);
-
-        // if (!up && !right && !down && !left)
-        //     this.animator.speed = 0;
-        // else
-        //     this.animator.speed = 1;
-
-        print(playerMovementX == PlayerMovement.Negative);
+        this.animator.SetBool("horizontal", left || right);
+        // this.animator.SetBool("right", right);
+        // this.animator.SetBool("left", left);
     }
 }
