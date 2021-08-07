@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour {
-
+    Rigidbody2D rigidbody;
     Animator animator;
-    CharacterController controller;
+    // CharacterController controller;
     public float walkingSpeed;
     public float animationBreakpoint = .1f;
     enum PlayerMovement {
@@ -18,7 +18,10 @@ public class PlayerMoviment : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         this.animator = this.GetComponent<Animator>();
-        this.controller = this.GetComponent<CharacterController>();
+        this.rigidbody = this.GetComponent<Rigidbody2D>();
+
+        this.rigidbody.gravityScale = 0;
+        // this.controller = this.GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -30,10 +33,11 @@ public class PlayerMoviment : MonoBehaviour {
         var inputX = Input.GetAxis(axisName: "Horizontal");
         var inputY = Input.GetAxis(axisName: "Vertical");
 
-        var input = new Vector3(inputX, inputY, 0);
+        var input = new Vector2(inputX, inputY);
         var deltaTime = Time.deltaTime;
 
-        this.controller.Move(input * deltaTime * walkingSpeed);
+        // this.transform.position += input * deltaTime * walkingSpeed;
+        this.rigidbody.MovePosition(input * deltaTime * walkingSpeed + this.rigidbody.position);
 
         this.SetAnimation(
             InputToMovement(inputX),
