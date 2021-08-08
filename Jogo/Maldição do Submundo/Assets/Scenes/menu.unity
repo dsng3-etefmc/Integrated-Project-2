@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cena: {fileID: 0}
+  cena2: {fileID: 0}
 --- !u!1 &165168054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1588,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1561660020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1772172251}
+        m_TargetAssemblyTypeName: troca_cena, Assembly-CSharp
+        m_MethodName: chamaCenaSaibaMais
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1561660020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2168,6 +2181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cena: {fileID: 102900000, guid: 4f77a42b2272b4f4e9840498fb7908a7, type: 3}
+  cena2: {fileID: 102900000, guid: 5869ff5ea6dcaff47872fee5c06341dd, type: 3}
 --- !u!1 &1789417369
 GameObject:
   m_ObjectHideFlags: 0
