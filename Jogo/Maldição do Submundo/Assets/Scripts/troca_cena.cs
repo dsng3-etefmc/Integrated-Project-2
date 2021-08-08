@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement; //biblioteca para trocar de cena
 
 public class troca_cena : MonoBehaviour
 {
-    public int  valorCena; //variavel para trocar de cena
+    public Object cena; //variavel para trocar de cena
    
     void Start() //só faz uma vez
     {
@@ -18,7 +18,7 @@ public class troca_cena : MonoBehaviour
     }
     public void chamaCena() //troca
     {
-        SceneManager.LoadScene(valorCena); //linha de cod para trocar de cena
+        SceneManager.LoadScene(this.cena.name); //linha de cod para trocar de cena
     } 
  
 

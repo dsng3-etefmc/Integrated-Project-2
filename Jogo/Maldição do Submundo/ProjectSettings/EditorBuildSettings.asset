@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menu2.unity
     guid: ddec5c3b4b22d7840b0994d76cdfbc9f
+  - enabled: 1
+    path: Assets/Scenes/1 Fase.unity
+    guid: 4f77a42b2272b4f4e9840498fb7908a7
+  - enabled: 1
+    path: Assets/Scenes/1 fase-tumba.unity
+    guid: 030ac5c9830a6484caa994f49cf6b807
   m_configObjects: {}
