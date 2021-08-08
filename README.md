@@ -27,3 +27,5 @@ Curso: Desenvolvimento de Sistemas - Games  - https://www.etefmc.com.br/curso-de
 * Abra o "Unity Hub"
 * clique em "ADD"
 * Selecione a pasta do jogo no local onde você clonou o repositório
+
+![espada-legendária-na-pedra-excalibur-ilustração-do-vetor-conceito-de-projeto-jogo-105246432-removebg-preview.png](https://github.com/dsng3-etefmc/Maldicao-do-Submundo_V2/blob/main/espada-legend%C3%A1ria-na-pedra-excalibur-ilustra%C3%A7%C3%A3o-do-vetor-conceito-de-projeto-jogo-105246432-removebg-preview%20(1).png)
