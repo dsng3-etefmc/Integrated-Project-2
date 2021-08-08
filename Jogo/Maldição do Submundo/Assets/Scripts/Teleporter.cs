@@ -7,7 +7,7 @@ public class Teleporter : MonoBehaviour {
     public float radious = 5.0f;
     public LayerMask playerLayer;
     public bool shouldChangeScene;
-    public Scene sceneTarget;
+    public Object sceneTarget;
     // Start is called before the first frame update
     void Start() {}
 
