@@ -23,6 +23,7 @@ public class DialogueController : MonoBehaviour {
 
     void Start() {
         this.canvasRender = GetComponent<CanvasRenderer>();
+        canvas.gameObject.SetActive(false);
     }
 
     void Update() {
