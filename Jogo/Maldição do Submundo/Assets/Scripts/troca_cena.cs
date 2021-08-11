@@ -3,42 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //biblioteca para trocar de cena
 
-public class troca_cena : MonoBehaviour
-{
-    public Object cena; //variavel para trocar de cena
-    public Object cena2 ; ////variavel para trocar para "saiba mais" 
-
-    public int SceneValue;
+public class troca_cena : MonoBehaviour {
+    public Object scene;
     BoxCollider2D collider;
 
-    void Start() //só faz uma vez
-    {
+    void Start() {
         collider = GetComponent<BoxCollider2D>();
     }
 
-    void Update() //faz mais de uma vez
-    {
+    void Update() {
         
     }
-    //---------------------troca de fase menu-----------------
-    public void chamaCena() //troca
-    {
-        SceneManager.LoadScene(this.cena.name); //linha de cod para trocar de cena
-    } 
-    public void chamaCenaSaibaMais() //troca
-    {
-        SceneManager.LoadScene(this.cena2.name); //linha de cod para trocar de cena
+
+    // Change scene to target scene
+    public void chamaCena() {
+        try {
+            SceneManager.LoadScene(this.scene.name);
+        } catch {}
     } 
     //-----------------------------------------
     //-----------------troca de fase - fase 1 -----------------------------------
 
-    void OnCollisionEnter2D(Collision2D coll) {
-    if (coll.gameObject.tag == "Player")
-     {
-        SceneManager.LoadScene(SceneValue);
-     }
-    }
+    // void OnCollisionEnter2D(Collision2D coll) {
+    //     if (coll.gameObject.tag == "Player") {
+    //         SceneManager.LoadScene(SceneValue);
+    //     }
+    // }
 }
-
-
-

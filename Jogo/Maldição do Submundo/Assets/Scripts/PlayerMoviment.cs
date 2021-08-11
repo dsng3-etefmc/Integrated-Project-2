@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour {
+    public static PlayerMoviment current;
+
     Rigidbody2D rigidbody;
     Animator animator;
     // CharacterController controller;
+    bool isPlayerHalted = true;
     public float walkingSpeed;
     public float animationBreakpoint = .1f;
     enum PlayerMovement {
@@ -14,6 +17,8 @@ public class PlayerMoviment : MonoBehaviour {
         Negative = -1
     }
     enum PlayerDirection { Left, Right, Null }
+
+    private void Awake() { current = this; }
 
     // Start is called before the first frame update
     void Start() {
@@ -29,6 +34,10 @@ public class PlayerMoviment : MonoBehaviour {
         this.HandleInput();
     }
 
+    public void shouldPlayerMove(bool should) {
+        this.isPlayerHalted = should;
+    }
+
     void HandleInput() {
         var inputX = Input.GetAxis(axisName: "Horizontal");
         var inputY = Input.GetAxis(axisName: "Vertical");
@@ -36,13 +45,15 @@ public class PlayerMoviment : MonoBehaviour {
         var input = new Vector2(inputX, inputY);
         var deltaTime = Time.deltaTime;
 
-        // this.transform.position += input * deltaTime * walkingSpeed;
-        this.rigidbody.MovePosition(input * deltaTime * walkingSpeed + this.rigidbody.position);
+        if (this.isPlayerHalted) {
+            // this.transform.position += input * deltaTime * walkingSpeed;
+            this.rigidbody.MovePosition(input * deltaTime * walkingSpeed + this.rigidbody.position);
 
-        this.SetAnimation(
-            InputToMovement(inputX),
-            InputToMovement(inputY)
-        );
+            this.SetAnimation(
+                InputToMovement(inputX),
+                InputToMovement(inputY)
+            );
+        }
     }
 
     PlayerDirection getDirection() {
@@ -52,9 +63,7 @@ public class PlayerMoviment : MonoBehaviour {
     ;}
 
     void turnCharacterToDirection (PlayerDirection playerNewDirection) {
-        print(playerNewDirection + ":" + this.getDirection());
         var shouldFlip = this.getDirection() != playerNewDirection && playerNewDirection != PlayerDirection.Null;
-        print(shouldFlip);
         var x = (shouldFlip ? -1 : 1) * transform.localScale.x;
         transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
     }
