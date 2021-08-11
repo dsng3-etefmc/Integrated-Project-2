@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueCollider : MonoBehaviour
-{
+public class DialogueCollider : MonoBehaviour {
+    public List<Dialogue> dialogues;
+
     public bool runOnce = true;
     private int executed = 0;
     BoxCollider2D boxCollider2D;
@@ -19,7 +20,7 @@ public class DialogueCollider : MonoBehaviour
 
     void triggerDialogue () {
         this.executed += 1;
-        DialogueController.current.setDialogue(PlayerGeneral.current.avatar, "Player", "Hello");
+        DialogueController.current.setMultipleDialogues(this.dialogues);
     }
 
     void OnTriggerEnter2D (Collider2D coll) {
