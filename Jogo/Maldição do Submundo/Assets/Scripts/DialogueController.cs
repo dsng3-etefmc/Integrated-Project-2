@@ -1,16 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Dialogue {
-    public Sprite avatar;
-    public string name;
-    public string text;
-}
-
 public class DialogueController : MonoBehaviour {
-    public Dialogue[] dialogues = {};
+    private List<Dialogue> dialogues;
 
     public Canvas canvas;
 
@@ -28,15 +23,38 @@ public class DialogueController : MonoBehaviour {
 
     void Start() {
         this.canvasRender = GetComponent<CanvasRenderer>();
+        canvas.gameObject.SetActive(false);
     }
 
     void Update() {
         
     }
 
+    Dialogue getNextDialogue () {
+        if (this.dialogues.Count != 0) {
+            var firstDialogue = dialogues[0];
+            this.dialogues.RemoveAt(0);
+            return firstDialogue;
+        } else {
+            return null;
+        }
+    }
+
     public void skipDialogue () {
-        PlayerMoviment.current.shouldPlayerMove(true);
-        canvas.gameObject.SetActive(false);
+        var nextDi = getNextDialogue();
+
+        if (nextDi != null) {
+            setDialogue(nextDi.avatar, nextDi.name, nextDi.text);
+        } else {
+            PlayerMoviment.current.shouldPlayerMove(true);
+            canvas.gameObject.SetActive(false);
+        }
+    }
+
+    public void setMultipleDialogues(List<Dialogue> dialogues) {
+        this.dialogues = dialogues;
+        var firstDialogue = getNextDialogue();
+        setDialogue(firstDialogue.avatar, firstDialogue.name, firstDialogue.text);
     }
 
     public void setDialogue(Sprite avatar, string name, string text) {
