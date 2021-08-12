@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>A <c>singleton</c> that handles dialogue</summary>
 public class DialogueController : MonoBehaviour {
     private List<Dialogue> dialogues;
 

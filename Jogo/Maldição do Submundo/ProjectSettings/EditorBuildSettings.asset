@@ -8,19 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/informacao.unity
-    guid: 5869ff5ea6dcaff47872fee5c06341dd
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: 7957ba73a0967b742b2122ea816e7ddf
-  - enabled: 1
-    path: Assets/Scenes/menu2.unity
-    guid: ddec5c3b4b22d7840b0994d76cdfbc9f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/1 Fase.unity
     guid: 4f77a42b2272b4f4e9840498fb7908a7
   - enabled: 1
     path: Assets/Scenes/1 fase-tumba.unity
     guid: 030ac5c9830a6484caa994f49cf6b807
+  - enabled: 1
+    path: Assets/Scenes/informacao.unity
+    guid: 719dc617506e98d4695801ede7d7b9f9
   m_configObjects: {}

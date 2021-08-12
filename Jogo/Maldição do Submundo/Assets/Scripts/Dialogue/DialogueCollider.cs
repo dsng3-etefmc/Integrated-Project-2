@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>A class that triggers dialogues with given intection</summary>
 public class DialogueCollider : MonoBehaviour {
     public List<Dialogue> dialogues;
 
@@ -13,16 +14,17 @@ public class DialogueCollider : MonoBehaviour {
         this.boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
-    void Update() {
-        
-    }
+    void Update() {}
 
+    // ---
+
+    /// <summary>Triggers dialogue</summary>
     void triggerDialogue () {
         this.executed += 1;
         DialogueController.current.setMultipleDialogues(this.dialogues);
     }
 
+    // Subscribe to collision event
     void OnTriggerEnter2D (Collider2D coll) {
         bool nTimesConstraint = this.runOnce ? this.executed == 0 : true;
         if (coll.gameObject.tag == "Player" && nTimesConstraint) {
