@@ -5,32 +5,45 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour {
     public float radious = 5.0f;
-    public LayerMask playerLayer;
     public bool shouldChangeScene;
-    public Object sceneTarget;
 
-    void Start() {}
+    public SceneField sceneTarget;
+
+    private CircleCollider2D collider;
+
+    void Start() {
+        this.collider = GetComponent<CircleCollider2D>();
+    }
 
     void Update() {
-        this.checkForInteraction();
+        // this.checkForInteraction();
+        this.collider.radius = this.radious;
     }
     
     /// <summary>Check if player is within the range</summary>
-    void checkForInteraction() {
-        var hit = Physics2D.OverlapCircle(this.transform.position, this.radious, this.playerLayer);
+    // void checkForInteraction() {
+    //     var hit = Physics2D.OverlapCircle(this.transform.position, this.radious, this.playerLayer);
 
-        if (hit != null) {
-            this.changeScene();
-        }
-    }
+    //     if (hit != null) {
+    //         this.changeScene();
+    //     }
+    // }
 
     /// <summary>Change current scene to the target scene</summary>
     void changeScene() {
-        SceneManager.LoadScene(sceneTarget.name);
+        if (this.sceneTarget.SceneName != "")
+            SceneManager.LoadScene(this.sceneTarget.SceneName);
     }
 
     // Gizmos circle
     public void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(transform.position, this.radious);
+    }
+
+    //
+    void OnTriggerEnter2D (Collider2D coll) {
+        if (coll.gameObject.tag == "Player") {
+            this.changeScene();
+        }
     }
 }

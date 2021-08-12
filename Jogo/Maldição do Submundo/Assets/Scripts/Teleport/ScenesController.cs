@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+[System.Serializable]
 public class ScenesController : MonoBehaviour {
 
     public SceneField sceneTarget;

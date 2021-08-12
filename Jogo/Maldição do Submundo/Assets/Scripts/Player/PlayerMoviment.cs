@@ -13,6 +13,7 @@ public class PlayerMoviment : MonoBehaviour {
     Rigidbody2D rigidbody;
     Animator animator;
 
+    public ScenesController scenesController;
 
     bool isPlayerHalted = true;
     public float walkingSpeed;
