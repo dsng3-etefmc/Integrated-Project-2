@@ -49,7 +49,8 @@ public class PlayerMoviment : MonoBehaviour {
 
         if (this.isPlayerHalted) {
             // this.transform.position += input * deltaTime * walkingSpeed;
-            this.rigidbody.MovePosition(input * deltaTime * walkingSpeed + this.rigidbody.position);
+            this.Translate(input * this.walkingSpeed);            
+            // this.Translate(input * deltaTime * walkingSpeed);
 
             this.SetAnimation(
                 InputToMovement(inputX),
@@ -83,8 +84,10 @@ public class PlayerMoviment : MonoBehaviour {
     }
 
     /// <summary>Translate character to x, y position</summary>
-    void Translate(float tx, float ty) {
-        transform.Translate(tx, ty, 0);
+    void Translate(Vector2 dx) {
+        var deltaTime = Time.fixedDeltaTime;
+        this.rigidbody.MovePosition(deltaTime * dx + this.rigidbody.position);
+        // transform.Translate(dx);
     }
 
     /// <summary>Changes character animation depending on its direction</summary>
