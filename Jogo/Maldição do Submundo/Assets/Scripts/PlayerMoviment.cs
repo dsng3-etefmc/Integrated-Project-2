@@ -52,9 +52,7 @@ public class PlayerMoviment : MonoBehaviour {
     ;}
 
     void turnCharacterToDirection (PlayerDirection playerNewDirection) {
-        print(playerNewDirection + ":" + this.getDirection());
         var shouldFlip = this.getDirection() != playerNewDirection && playerNewDirection != PlayerDirection.Null;
-        print(shouldFlip);
         var x = (shouldFlip ? -1 : 1) * transform.localScale.x;
         transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
     }
