@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Teleporter : MonoBehaviour {
-    public float radious = 5.0f;
+    public float radious = 2.5f;
     public bool shouldChangeScene;
 
     public SceneField sceneTarget;
