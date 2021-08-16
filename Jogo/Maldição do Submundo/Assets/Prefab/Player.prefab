@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2044810090013259007}
   - component: {fileID: 2044810090013259006}
   - component: {fileID: 2044810090013259005}
-  - component: {fileID: 1074736309}
   - component: {fileID: 2777696461984049625}
   m_Layer: 0
   m_Name: Player
@@ -159,7 +158,7 @@ BoxCollider2D:
   m_Offset: {x: -0.0012507439, y: -0.64218855}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.03}
     oldSize: {x: 0.48, y: 1.38}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -169,52 +168,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47454357, y: 0.08110523}
   m_EdgeRadius: 0
---- !u!114 &1074736309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044810090013258995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShadowGroup: 0
-  m_HasRenderer: 1
-  m_UseRendererSilhouette: 1
-  m_CastsShadows: 1
-  m_SelfShadows: 0
-  m_ApplyToSortingLayers: 00000000
-  m_ShapePath:
-  - {x: -0.23216197, y: -0.6752274, z: 0}
-  - {x: -0.094921805, y: -0.6787522, z: 0}
-  - {x: -0.03460883, y: -0.39872766, z: 0}
-  - {x: 0.038628355, y: -0.39441967, z: 0}
-  - {x: 0.0903252, y: -0.6744442, z: 0}
-  - {x: 0.23679957, y: -0.6787522, z: 0}
-  - {x: 0.1490742, y: -0.20133948, z: 0}
-  - {x: 0.14636686, y: 0.00028181076, z: 0}
-  - {x: 0.23314121, y: 0.06722188, z: 0}
-  - {x: 0.23314121, y: 0.1366415, z: 0}
-  - {x: 0.14103657, y: 0.21090555, z: 0}
-  - {x: 0.14636686, y: 0.31018972, z: 0}
-  - {x: 0.19371808, y: 0.4198053, z: 0}
-  - {x: 0.18941003, y: 0.5921283, z: 0}
-  - {x: 0.09894056, y: 0.67828965, z: 0}
-  - {x: -0.107846804, y: 0.67398155, z: 0}
-  - {x: -0.19400817, y: 0.58351207, z: 0}
-  - {x: -0.1940082, y: 0.4370377, z: 0}
-  - {x: -0.13800327, y: 0.32933593, z: 0}
-  - {x: -0.1304383, y: 0.22521615, z: 0}
-  - {x: -0.20320973, y: 0.16639256, z: 0}
-  - {x: -0.20262432, y: 0.0493114, z: 0}
-  - {x: -0.14661944, y: 0.0062305927, z: 0}
-  - {x: -0.15954363, y: -0.20486474, z: 0}
-  m_ShapePathHash: 1041662555
-  m_Mesh: {fileID: 0}
-  m_InstanceId: 96682
 --- !u!114 &2777696461984049625
 MonoBehaviour:
   m_ObjectHideFlags: 0

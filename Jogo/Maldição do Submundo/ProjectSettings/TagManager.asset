@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Tree
-  - 
+  - Details
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Tree
     uniqueID: 782604455
+    locked: 0
+  - name: Details
+    uniqueID: 4179043065
     locked: 0

@@ -11,8 +11,8 @@ public class Follow : MonoBehaviour {
     // Updates camera position based on its target
     void Update() {
         if (Target) {
-            this.transform.position = Target.transform.TransformPoint(new Vector3( 0f, 2f, -10f));
-            this.transform.LookAt(Target.transform.position);
+            this.transform.position = Target.transform.TransformPoint(new Vector3( 0f, 0f, -10f));
+            this.transform.LookAt(Target.transform);
         }
     }
 }
