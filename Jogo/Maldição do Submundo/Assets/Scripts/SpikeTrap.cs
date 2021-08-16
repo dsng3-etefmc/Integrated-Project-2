@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SpikeTrap : MonoBehaviour
-{
+public class SpikeTrap : MonoBehaviour {
+
     public bool isActive = false;
     public float time = 15f;
 
@@ -12,24 +12,19 @@ public class SpikeTrap : MonoBehaviour
 
     bool shouldAttack = false;
 
-    public void setActive()
-    {
+    public void setActive() {
         this.isActive = true;
     }
 
 
-    void Start()
-    {
-
+    void Start() {
         this.animator = GetComponent<Animator>();
 
         StartCoroutine(StartTrap());
     }
 
-    IEnumerator StartTrap()
-    {
-        while (true)
-        {
+    IEnumerator StartTrap() {
+        while (true) {
 
             this.shouldAttack = false;
 
@@ -45,20 +40,16 @@ public class SpikeTrap : MonoBehaviour
         }
     }
 
-    void RetractSpikes()
-    {
+    void RetractSpikes() {
         this.animator.SetTrigger("retractSpike");
     }
 
-    void LaunchSpikes()
-    {
+    void LaunchSpikes() {
         this.animator.SetTrigger("setSpike");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && this.shouldAttack)
-        {
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player") && this.shouldAttack) {
             Debug.Log("Player damaged by spike");
         }
     }
