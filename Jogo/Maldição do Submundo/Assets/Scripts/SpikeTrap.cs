@@ -23,7 +23,7 @@ public class SpikeTrap : MonoBehaviour {
         this.alreadyHit = false;
         this.animator = GetComponent<Animator>();
 
-        StartCoroutine(StartTrap());
+        StartCoroutine(this.StartTrap());
     }
 
     void Update() {
@@ -42,6 +42,7 @@ public class SpikeTrap : MonoBehaviour {
             this.isPlayerInside = false;
     }
 
+    /// <summary>Starts the trap</summary>
     IEnumerator StartTrap() {
         while (true) {
 
@@ -58,14 +59,17 @@ public class SpikeTrap : MonoBehaviour {
         }
     }
 
+    /// <summary>Retract spikes animation</summary>
     void RetractSpikes() {
         this.animator.SetTrigger("retractSpike");
     }
 
+    /// <summary>Launch spikes animation</summary>
     void LaunchSpikes() {
         this.animator.SetTrigger("setSpike");
     }
 
+    /// <summary>Triggers the hit damage and awaits a bit</summary>
     IEnumerator triggerHit() {
         this.alreadyHit = true;
         PlayerEvents.current.playerTriggerChangeHealth(

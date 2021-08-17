@@ -21,9 +21,9 @@ public class PlayerEvents : MonoBehaviour {
     public event Action<Health> onPlayerChangeHealth;
     
     // -Triggers
-    public void playerTriggerChangeHealth (Health.HealthChange type, float health) {
+    public void playerTriggerChangeHealth (Health.HealthChange type, float value) {
         if (playerHealthListener != null) {
-            Health newHealth = playerHealthListener(type, health);
+            Health newHealth = playerHealthListener(type, value);
 
             if (onPlayerChangeHealth != null) {
                 this.onPlayerChangeHealth(newHealth);
