@@ -11,15 +11,17 @@ public class HUDController : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        
+        PlayerEvents.current.onPlayerChangeHealth += this.onPlayerHealthChange;
+    }
+
+    void onPlayerHealthChange (Health health) {
+        this.updateHealthbar(health.getPercentage());
     }
 
     // Update is called once per frame
-    void Update() {
-        this.updateHealthbar();
-    }
+    void Update() {}
 
-    void updateHealthbar() {
-        this.healthBar.value = 1 - health;
+    void updateHealthbar(float newHealth) {
+        this.healthBar.value = newHealth;
     }
 }
