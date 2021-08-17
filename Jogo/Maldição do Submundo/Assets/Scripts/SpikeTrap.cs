@@ -3,34 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class SpikeTrap : MonoBehaviour
-{
+public class SpikeTrap : MonoBehaviour {
+
+    public float damage = 25f;
     public bool isActive = false;
     public float time = 15f;
 
     private Animator animator;
 
-    bool shouldAttack = false;
+    private bool isPlayerInside = false;
+    private bool alreadyHit = false;
+    private bool shouldAttack = false;
 
-    public void setActive()
-    {
+    public void setActive() {
         this.isActive = true;
     }
 
-
-    void Start()
-    {
-
+    void Start() {
+        this.alreadyHit = false;
         this.animator = GetComponent<Animator>();
 
-        StartCoroutine(StartTrap());
+        StartCoroutine(this.StartTrap());
     }
 
-    IEnumerator StartTrap()
-    {
-        while (true)
-        {
+    void Update() {
+        if (this.isPlayerInside && this.shouldAttack && !this.alreadyHit) {
+            StartCoroutine(this.triggerHit());
+        }
+    }
 
+    void OnTriggerEnter2D (Collider2D other) {
+        if (other.CompareTag("Player"))
+            this.isPlayerInside = true;
+    }
+
+    void OnTriggerExit2D (Collider2D other) {
+        if (other.CompareTag("Player"))
+            this.isPlayerInside = false;
+    }
+
+    /// <summary>Starts the trap</summary>
+    IEnumerator StartTrap() {
+        while (true) {
+
+            this.RetractSpikes();
             this.shouldAttack = false;
 
             yield return new WaitForSeconds(this.time);
@@ -40,26 +56,29 @@ public class SpikeTrap : MonoBehaviour
 
             yield return new WaitForSeconds(this.time);
 
-            this.RetractSpikes();
-
         }
     }
 
-    void RetractSpikes()
-    {
+    /// <summary>Retract spikes animation</summary>
+    void RetractSpikes() {
         this.animator.SetTrigger("retractSpike");
     }
 
-    void LaunchSpikes()
-    {
+    /// <summary>Launch spikes animation</summary>
+    void LaunchSpikes() {
         this.animator.SetTrigger("setSpike");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && this.shouldAttack)
-        {
-            Debug.Log("Player damaged by spike");
-        }
+    /// <summary>Triggers the hit damage and awaits a bit</summary>
+    IEnumerator triggerHit() {
+        this.alreadyHit = true;
+        PlayerEvents.current.playerTriggerChangeHealth(
+            Health.HealthChange.damage, 
+            this.damage
+        );
+
+        yield return new WaitForSeconds(3);
+
+        this.alreadyHit = false;
     }
 }
