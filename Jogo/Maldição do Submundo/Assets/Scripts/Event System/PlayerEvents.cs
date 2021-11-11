@@ -3,6 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public enum PlayerAnimationEvents {
+    Step
+}
+
 public class PlayerEvents : MonoBehaviour {
     // self point
     public static PlayerEvents current;
@@ -21,7 +26,7 @@ public class PlayerEvents : MonoBehaviour {
     public event Action<Health> onPlayerChangeHealth;
     
     // -Triggers
-    public void playerTriggerChangeHealth (Health.HealthChange type, float value) {
+    public void OnplayerChangeHealth (Health.HealthChange type, float value) {
         if (playerHealthListener != null) {
             Health newHealth = playerHealthListener(type, value);
 
@@ -29,5 +34,15 @@ public class PlayerEvents : MonoBehaviour {
                 this.onPlayerChangeHealth(newHealth);
             }
         } 
+    }
+
+    // Player animation on event
+
+    public event Action<PlayerAnimationEvents> onPlayerAnimation;
+
+    public void OnplayerEventAnimation (PlayerAnimationEvents animation) {
+        if (onPlayerAnimation != null) {
+            onPlayerAnimation(animation);
+        }
     }
 }

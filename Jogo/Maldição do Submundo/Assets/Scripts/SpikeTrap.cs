@@ -72,7 +72,7 @@ public class SpikeTrap : MonoBehaviour {
     /// <summary>Triggers the hit damage and awaits a bit</summary>
     IEnumerator triggerHit() {
         this.alreadyHit = true;
-        PlayerEvents.current.playerTriggerChangeHealth(
+        PlayerEvents.current.OnplayerChangeHealth(
             Health.HealthChange.damage, 
             this.damage
         );

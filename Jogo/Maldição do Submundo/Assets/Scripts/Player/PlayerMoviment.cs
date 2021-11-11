@@ -44,19 +44,27 @@ public class PlayerMoviment : MonoBehaviour {
         var inputX = Input.GetAxis(axisName: "Horizontal");
         var inputY = Input.GetAxis(axisName: "Vertical");
 
-        var input = new Vector2(inputX, inputY);
-        var deltaTime = Time.deltaTime;
-
         if (this.isPlayerHalted) {
-            // this.transform.position += input * deltaTime * walkingSpeed;
-            this.Translate(input * this.walkingSpeed);            
-            // this.Translate(input * deltaTime * walkingSpeed);
+            Move(inputX, inputY);
 
             this.SetAnimation(
                 InputToMovement(inputX),
                 InputToMovement(inputY)
             );
         }
+    }
+
+    /// takes input and transales it to a movement
+    /// validates if the movement is valid
+    void Move(float inputX, float inputY) {
+        if (inputX == 0 && inputY == 0) return;
+
+        var angle = Mathf.Atan2(inputY, inputX);
+        var direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+
+        var deltaTime = Time.deltaTime;
+
+        this.Translate(direction * this.walkingSpeed);
     }
 
     /// <summary>Gets horizontal direction</summary>
@@ -100,6 +108,7 @@ public class PlayerMoviment : MonoBehaviour {
         var right = playerMovementX == PlayerMovement.Positive;
         var down = playerMovementY == PlayerMovement.Negative;
         var left = playerMovementX == PlayerMovement.Negative;
+        var moving = playerMovementX != PlayerMovement.Null || playerMovementY != PlayerMovement.Null;
 
         var horizontalDirection = right ? PlayerDirection.Right : PlayerDirection.Null;
         horizontalDirection = left ? PlayerDirection.Left : horizontalDirection;
@@ -108,6 +117,7 @@ public class PlayerMoviment : MonoBehaviour {
         this.animator.SetBool("up", up);
         this.animator.SetBool("down", down);
         this.animator.SetBool("horizontal", left || right);
+        this.animator.SetBool("moving", moving);
     }
 
     // Enums
