@@ -216,6 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147b3424cdeeb8a44b3b85f1bc8eb368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _minHealth: 0
+  _health: 100
 --- !u!95 &2044810090013259007
 Animator:
   serializedVersion: 3
@@ -475,16 +478,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultSound: {fileID: 8300000, guid: 44737e645aa918043b3d8cab5d1511bc, type: 3}
-  tileToSounds:
-  - tile:
-    - {fileID: 11400000, guid: cb85cade31f2c0b488420a11c4417c54, type: 2}
-    - {fileID: 11400000, guid: cb85cade31f2c0b488420a11c4417c54, type: 2}
-    - {fileID: 11400000, guid: 9647b9e496eedeb4d965e3a03ad4d911, type: 2}
-    - {fileID: 11400000, guid: a937e8494b64e944c9647599488bf0b8, type: 2}
-    - {fileID: 11400000, guid: 91bf49828c7d6d044ac0fc9914f7f929, type: 2}
-    - {fileID: 11400000, guid: 91bf49828c7d6d044ac0fc9914f7f929, type: 2}
-    sound:
-    - {fileID: 8300000, guid: 44737e645aa918043b3d8cab5d1511bc, type: 3}
-    - {fileID: 8300000, guid: 302595b93370c52408825d7fb07d09be, type: 3}
-    - {fileID: 8300000, guid: 87d51f07abec0584d805bbe3708a7c71, type: 3}
-    - {fileID: 8300000, guid: 0b8aed54efbbfa946af2f31d3d92f9cd, type: 3}
+  footstepManager: {fileID: 0}

@@ -8,8 +8,8 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerAnimation))]
-public class PlayerGeneral : MonoBehaviour {
-    public static PlayerGeneral current;
+public class Player : MonoBehaviour {
+    public static Player current;
 
     // Player sprite
     public Sprite avatar;
@@ -20,12 +20,15 @@ public class PlayerGeneral : MonoBehaviour {
     public PlayerMovement Movement;
     [System.NonSerialized]
     public PlayerAnimation Animation;
+    [System.NonSerialized]
+    public Collider2D Collider;
 
     private void Awake() { 
         current = this; 
         Health = GetComponent<Health>();
         Movement = GetComponent<PlayerMovement>();
         Animation = GetComponent<PlayerAnimation>();
+        Collider = GetComponent<Collider2D>();
     }
 
     void Start () {

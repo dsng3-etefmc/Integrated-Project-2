@@ -47,7 +47,7 @@ public class DialogueController : MonoBehaviour {
         if (nextDi != null) {
             setDialogue(nextDi.avatar, nextDi.name, nextDi.text);
         } else {
-            PlayerGeneral.current.Movement.AllowPlayerToMove(true);
+            Player.current.Movement.AllowPlayerToMove(true);
             canvas.gameObject.SetActive(false);
         }
     }
@@ -63,7 +63,7 @@ public class DialogueController : MonoBehaviour {
         this.nameBox.text = name;
         this.imageBox.sprite = avatar;
 
-        PlayerGeneral.current.Movement.AllowPlayerToMove(false);
+        Player.current.Movement.AllowPlayerToMove(false);
         canvas.gameObject.SetActive(true);
     }
 }

@@ -10,7 +10,7 @@ public class HUDController : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        PlayerGeneral.current.Health.onHeathChange += this.onPlayerHealthChange;
+        Player.current.Health.onHeathChange += this.onPlayerHealthChange;
     }
 
     void onPlayerHealthChange (Health health) {

@@ -5,14 +5,16 @@ using UnityEngine;
 /// <summary>
 /// A Class that deals with player movement
 /// </summary>
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour, IMoveable {
     // Components
-    Rigidbody2D rb;
-    Animator animator;
+    private Rigidbody2D rb;
+    private Animator animator;
 
-    bool shouldPlayerMove = true;
-    public float walkingSpeed;
-    public float animationBreakpoint = .1f;
+    private bool shouldPlayerMove = true;
+    [SerializeField]
+    private float walkingSpeed;
+    [SerializeField]
+    private float animationBreakpoint = .1f;
 
     public void AllowPlayerToMove(bool value) {
         shouldPlayerMove = value;
@@ -43,6 +45,8 @@ public class PlayerMovement : MonoBehaviour {
             );
         }
     }
+
+    public void RequestStopMoving () {}
 
     /// takes input and transales it to a movement
     /// validates if the movement is valid
@@ -85,7 +89,6 @@ public class PlayerMovement : MonoBehaviour {
     void Translate(Vector2 dx) {
         var deltaTime = Time.fixedDeltaTime;
         this.rb.MovePosition(deltaTime * dx + this.rb.position);
-        // transform.Translate(dx);
     }
 
     /// <summary>Changes character animation depending on its direction</summary>

@@ -16,7 +16,7 @@ public class Footstep : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        PlayerGeneral.current.Animation.onPlayerEventAnimation += OnPlayerAnimation;
+        Player.current.Animation.onPlayerEventAnimation += OnPlayerAnimation;
     }
 
     // run OnStep on step event
