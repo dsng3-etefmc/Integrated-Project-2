@@ -9,15 +9,15 @@ public class Teleporter : MonoBehaviour {
 
     public SceneField sceneTarget;
 
-    private CircleCollider2D collider;
+    private CircleCollider2D coll;
 
     void Start() {
-        this.collider = GetComponent<CircleCollider2D>();
+        this.coll = GetComponent<CircleCollider2D>();
     }
 
     void Update() {
         // this.checkForInteraction();
-        this.collider.radius = this.radious;
+        this.coll.radius = this.radious;
     }
     
     /// <summary>Check if player is within the range</summary>

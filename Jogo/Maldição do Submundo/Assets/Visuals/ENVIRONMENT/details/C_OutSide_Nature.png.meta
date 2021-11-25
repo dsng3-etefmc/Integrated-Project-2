@@ -352,15 +352,22 @@ TextureImporter:
       name: C_OutSide_Nature_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 469
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 290
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17857143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: -9}
+        - {x: -8.5, y: -5}
+        - {x: -0.5, y: -4}
+        - {x: 10.5, y: -8}
+        - {x: 7.5, y: -14}
+        - {x: 2.5, y: -12}
+        - {x: -2.5, y: -14}
       tessellationDetail: 0
       bones: []
       spriteID: eab7372db30396d50800000000000000
@@ -373,15 +380,22 @@ TextureImporter:
       name: C_OutSide_Nature_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 466
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 258
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17857143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10.5, y: -9}
+        - {x: -8.5, y: -6}
+        - {x: 4.5, y: -5}
+        - {x: 10.5, y: -8}
+        - {x: 7.5, y: -14}
+        - {x: 2.5, y: -12}
+        - {x: -2.5, y: -14}
       tessellationDetail: 0
       bones: []
       spriteID: 28cf9b2e60ef5fe40800000000000000
@@ -398,8 +412,8 @@ TextureImporter:
         y: 416
         width: 92
         height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.11702127}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -419,8 +433,8 @@ TextureImporter:
         y: 448
         width: 48
         height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5208334, y: 0.12903225}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -437,11 +451,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 199
-        y: 384
+        y: 383
         width: 48
         height: 62
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5416667, y: 0.12903225}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -457,12 +471,12 @@ TextureImporter:
       name: C_OutSide_Nature_5
       rect:
         serializedVersion: 2
-        x: 10
-        y: 459
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 80
+        y: 299
+        width: 15
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1904762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,12 +492,12 @@ TextureImporter:
       name: C_OutSide_Nature_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 449
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 80
+        y: 267
+        width: 15
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1904762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -499,10 +513,10 @@ TextureImporter:
       name: C_OutSide_Nature_7
       rect:
         serializedVersion: 2
-        x: 20
-        y: 448
-        width: 10
-        height: 9
+        x: 32
+        y: 398
+        width: 14
+        height: 17
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,15 +534,22 @@ TextureImporter:
       name: C_OutSide_Nature_8
       rect:
         serializedVersion: 2
-        x: 10
-        y: 433
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 96
+        y: 306
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -7.5, y: -4}
+        - {x: -7.5, y: -3}
+        - {x: -4.5, y: -1}
+        - {x: 4.5, y: -1}
+        - {x: 7.5, y: -3}
+        - {x: 3.5, y: -6}
+        - {x: -3.5, y: -6}
       tessellationDetail: 0
       bones: []
       spriteID: 6992678efeae00580800000000000000
@@ -604,15 +625,22 @@ TextureImporter:
       name: C_OutSide_Nature_12
       rect:
         serializedVersion: 2
-        x: 1
-        y: 423
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 96
+        y: 274
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -3.5, y: -6}
+        - {x: -7.5, y: -4}
+        - {x: -7.5, y: -3}
+        - {x: -3.5, y: -1}
+        - {x: 2.5, y: -1}
+        - {x: 7.5, y: -2}
+        - {x: 3.5, y: -6}
       tessellationDetail: 0
       bones: []
       spriteID: cb6c588fc6c7f6010800000000000000
@@ -667,12 +695,12 @@ TextureImporter:
       name: C_OutSide_Nature_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 398
-        width: 14
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 132
+        y: 330
+        width: 23
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26666668}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -688,12 +716,12 @@ TextureImporter:
       name: C_OutSide_Nature_16
       rect:
         serializedVersion: 2
-        x: 16
-        y: 392
-        width: 15
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 132
+        y: 298
+        width: 23
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26666668}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -709,12 +737,12 @@ TextureImporter:
       name: C_OutSide_Nature_17
       rect:
         serializedVersion: 2
-        x: 32
-        y: 398
-        width: 14
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 132
+        y: 266
+        width: 23
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26666668}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -722,69 +750,6 @@ TextureImporter:
       bones: []
       spriteID: da1a141b1be9ae560800000000000000
       internalID: 7343856628401283501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_18
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 404
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07bfe671c58871570800000000000000
-      internalID: 8437362356013431664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_19
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 398
-        width: 14
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e65e91c77df1f990800000000000000
-      internalID: -7353818025727994139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_20
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 392
-        width: 15
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6109ab3ee36821680800000000000000
-      internalID: -8785812318379667434
       vertices: []
       indices: 
       edges: []
@@ -811,69 +776,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: C_OutSide_Nature_22
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 404
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bca5b88acd2a05a0800000000000000
-      internalID: -6554375959784084303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_23
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 398
-        width: 14
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7fe036fb212a7140800000000000000
-      internalID: 4718120032321728383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_24
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 392
-        width: 15
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 271ff78a70a18d6f0800000000000000
-      internalID: -659748725215727246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: C_OutSide_Nature_25
       rect:
         serializedVersion: 2
@@ -890,90 +792,6 @@ TextureImporter:
       bones: []
       spriteID: 002b379de4bb34b60800000000000000
       internalID: 7729227332827984384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_26
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 404
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62016b1b1d891afc0800000000000000
-      internalID: -3485336610210967514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_27
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 387
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e07581fd74e54ac70800000000000000
-      internalID: 8981407219662214926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_28
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 384
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 777b77b48bbc71b70800000000000000
-      internalID: 8869781983530039159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_29
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 387
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1ab9f724f7645710800000000000000
-      internalID: 1681082859256396315
       vertices: []
       indices: 
       edges: []
@@ -1000,27 +818,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: C_OutSide_Nature_31
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 387
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2965267d26c55e6b0800000000000000
-      internalID: -5267702609549830510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: C_OutSide_Nature_32
       rect:
         serializedVersion: 2
@@ -1029,7 +826,7 @@ TextureImporter:
         width: 15
         height: 21
       alignment: 9
-      pivot: {x: 0.55510813, y: 0.22446115}
+      pivot: {x: 0.5, y: 0.1904762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1037,27 +834,6 @@ TextureImporter:
       bones: []
       spriteID: 9df91a6e901f5ccd0800000000000000
       internalID: -2538357790127054887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_33
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 387
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93237e432c8ea0910800000000000000
-      internalID: 1804510521524171321
       vertices: []
       indices: 
       edges: []
@@ -1079,69 +855,6 @@ TextureImporter:
       bones: []
       spriteID: af338f8ef729cc720800000000000000
       internalID: 2867828140795245562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_35
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 387
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 419c2a702eaa0fa70800000000000000
-      internalID: 8858768354805205268
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_36
-      rect:
-        serializedVersion: 2
-        x: 150
-        y: 384
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5527ef046edecc90800000000000000
-      internalID: -7147531037245495972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_37
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 387
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f27aa6a2811f2bfa0800000000000000
-      internalID: -5786297485124524241
       vertices: []
       indices: 
       edges: []
@@ -1176,35 +889,21 @@ TextureImporter:
         width: 21
         height: 28
       alignment: 9
-      pivot: {x: 0.4999995, y: 0.16810825}
+      pivot: {x: 0.4999995, y: 0.17857143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2.5, y: -14}
+        - {x: -10.5, y: -8}
+        - {x: -8.5, y: -5}
+        - {x: 5.5, y: -5}
+        - {x: 10.5, y: -9}
+        - {x: 7.5, y: -14}
+        - {x: 2.5, y: -12}
       tessellationDetail: 0
       bones: []
       spriteID: 1339bd2522b82e3d0800000000000000
       internalID: -3178825407434878159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_40
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 354
-        width: 21
-        height: 28
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 867761ac70d7f0cc0800000000000000
-      internalID: -3742635292912879768
       vertices: []
       indices: 
       edges: []
@@ -1218,7 +917,7 @@ TextureImporter:
         width: 15
         height: 12
       alignment: 9
-      pivot: {x: 0.50000054, y: 0.22446187}
+      pivot: {x: 0.50000054, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1239,7 +938,7 @@ TextureImporter:
         width: 23
         height: 15
       alignment: 9
-      pivot: {x: 0.50000066, y: 0.2520162}
+      pivot: {x: 0.50000066, y: 0.26666668}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1260,35 +959,21 @@ TextureImporter:
         width: 21
         height: 28
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.17857143}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2.5, y: -14}
+        - {x: -10.5, y: -9}
+        - {x: -8.5, y: -5}
+        - {x: 2.5, y: -4}
+        - {x: 10.5, y: -9}
+        - {x: 7.5, y: -14}
+        - {x: 2.5, y: -12}
       tessellationDetail: 0
       bones: []
       spriteID: d038dd6ae6e10d260800000000000000
       internalID: 7120224471467524877
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: C_OutSide_Nature_48
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 322
-        width: 21
-        height: 28
-      alignment: 9
-      pivot: {x: 0.5, y: 0.15}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 876159f8d4da313e0800000000000000
-      internalID: -2084131653909408136
       vertices: []
       indices: 
       edges: []
@@ -1302,7 +987,7 @@ TextureImporter:
         width: 15
         height: 21
       alignment: 9
-      pivot: {x: 0.5, y: 0.15}
+      pivot: {x: 0.5, y: 0.1904762}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1323,14 +1008,84 @@ TextureImporter:
         width: 15
         height: 12
       alignment: 9
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: -3.5, y: -6}
+        - {x: -7.5, y: -4}
+        - {x: -7.5, y: -3}
+        - {x: -4.5, y: -1}
+        - {x: 3.5, y: -1}
+        - {x: 7.5, y: -3}
+        - {x: 3.5, y: -6}
+      tessellationDetail: 0
       bones: []
       spriteID: 863271617f5e76b60800000000000000
       internalID: 7739407334049784680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C_OutSide_Nature_18
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 32
+        width: 15
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bfe671c58871570800000000000000
+      internalID: 8437362356013431664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C_OutSide_Nature_19
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 192
+        width: 19
+        height: 64
+      alignment: 9
+      pivot: {x: 0.57894737, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e65e91c77df1f990800000000000000
+      internalID: -7353818025727994139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: C_OutSide_Nature_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 452
+        width: 64
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19148935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6109ab3ee36821680800000000000000
+      internalID: -8785812318379667434
       vertices: []
       indices: 
       edges: []

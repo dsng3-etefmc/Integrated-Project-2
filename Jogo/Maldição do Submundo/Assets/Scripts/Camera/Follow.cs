@@ -6,7 +6,9 @@ using UnityEngine;
 public class Follow : MonoBehaviour {
     public GameObject Target;
 
-    void Start() {}
+    void Start() {
+        Target = Target != null ? Target : GameObject.FindWithTag("Player");
+    }
 
     // Updates camera position based on its target
     void Update() {

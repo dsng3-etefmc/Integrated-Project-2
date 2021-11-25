@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5206564809856880088, guid: 833793ab786eb724994aa35652595c87, type: 3}
       propertyPath: m_Name
-      value: Stake with skull
+      value: Stake (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5206564809856880089, guid: 833793ab786eb724994aa35652595c87, type: 3}
       propertyPath: m_RootOrder
@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5206564809856880089, guid: 833793ab786eb724994aa35652595c87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.465836
+      value: 28.47
       objectReference: {fileID: 0}
     - target: {fileID: 5206564809856880089, guid: 833793ab786eb724994aa35652595c87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.597317
+      value: -27.58
       objectReference: {fileID: 0}
     - target: {fileID: 5206564809856880089, guid: 833793ab786eb724994aa35652595c87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56,8 +56,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5206564809856880094, guid: 833793ab786eb724994aa35652595c87, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1875
+      objectReference: {fileID: 0}
+    - target: {fileID: 5206564809856880094, guid: 833793ab786eb724994aa35652595c87, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -2190730249365535445, guid: d2a0a57a8de474f488cd332cc9e10ca5, type: 3}
+      objectReference: {fileID: -7353818025727994139, guid: d2a0a57a8de474f488cd332cc9e10ca5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 833793ab786eb724994aa35652595c87, type: 3}
