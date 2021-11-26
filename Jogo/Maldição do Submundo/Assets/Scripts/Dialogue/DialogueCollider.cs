@@ -10,6 +10,8 @@ public class DialogueCollider : MonoBehaviour {
     private int executed = 0;
     BoxCollider2D boxCollider2D;
 
+    private bool isExecuting = false;
+
     void Start() {
         this.boxCollider2D = GetComponent<BoxCollider2D>();
     }
@@ -20,8 +22,14 @@ public class DialogueCollider : MonoBehaviour {
 
     /// <summary>Triggers dialogue</summary>
     void triggerDialogue () {
-        this.executed += 1;
-        DialogueController.current.setMultipleDialogues(this.dialogues);
+        this.isExecuting = true;
+        DialogueController.current.StartDialogues(
+            this.dialogues, 
+            onFinish: () => {
+                this.executed += 1;
+                this.isExecuting = false;
+            }
+        );
     }
 
     // Subscribe to collision event
