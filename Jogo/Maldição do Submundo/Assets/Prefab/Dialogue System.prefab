@@ -545,9 +545,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1058779798}
-  textBox: {fileID: 492428035}
-  nameBox: {fileID: 2147363938}
-  imageBox: {fileID: 1167557974}
+  _textBox: {fileID: 492428035}
+  _nameBox: {fileID: 2147363938}
+  _imageBox: {fileID: 1167557974}
+  _button: {fileID: 4773468520037985017}
 --- !u!1 &3444507004974698508
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,19 +669,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8285325098677490304}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3819591136304676899}
-        m_TargetAssemblyTypeName: DialogueController, Assembly-CSharp
-        m_MethodName: skipDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5951242535953375118
 GameObject:
   m_ObjectHideFlags: 0

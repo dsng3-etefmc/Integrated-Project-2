@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     public int SceneValue;
-    BoxCollider2D collider;
+    BoxCollider2D coll;
 
 
     void Start()
     {
-        collider = GetComponent<BoxCollider2D>();
+        coll = GetComponent<BoxCollider2D>();
     }
 
 

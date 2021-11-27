@@ -20,8 +20,12 @@ public class DialogueCollider : MonoBehaviour {
 
     /// <summary>Triggers dialogue</summary>
     void triggerDialogue () {
-        this.executed += 1;
-        DialogueController.current.setMultipleDialogues(this.dialogues);
+        DialogueController.current.StartDialogues(
+            this.dialogues, 
+            onFinish: () => {
+                this.executed += 1;
+            }
+        );
     }
 
     // Subscribe to collision event
