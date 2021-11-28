@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-[RequireComponent(typeof(Interactable))]
 public class Teleporter : MonoBehaviour {
-    public bool shouldChangeScene;
 
     public SceneField sceneTarget;
 
     void Start ()
     {
-        GetComponent<Interactable>().OnInteract += this.changeScene;
+        var interactable = GetComponent<Interactable>();
+        if (interactable != null) interactable.OnInteract += this.changeScene;
     }
 
     /// <summary>Change current scene to the target scene</summary>
-    void changeScene() 
+    public void changeScene() 
     {
         if (this.sceneTarget.SceneName != "")
             SceneManager.LoadScene(this.sceneTarget.SceneName);
