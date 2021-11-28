@@ -10,13 +10,7 @@ using UnityEngine.UI;
 public class DialogueController : MonoBehaviour {
     private List<Dialogue> dialogues;
 
-    public Canvas canvas;
-
-    // Components
-    [SerializeField] private Text _textBox;
-    [SerializeField] private Text _nameBox;
-    [SerializeField] private Image _imageBox;
-    [SerializeField] private Button _button;
+    [SerializeField] private HUDController _HUDController;
 
     private CanvasRenderer canvasRender;
 
@@ -31,8 +25,7 @@ public class DialogueController : MonoBehaviour {
 
     void Start() {
         this.canvasRender = GetComponent<CanvasRenderer>();
-        canvas.gameObject.SetActive(false);
-        _button.onClick.AddListener(SkipToNextDialogue);
+        _HUDController.dialogueInterface.button.onClick.AddListener(SkipToNextDialogue);
     }
 
     Dialogue getNextDialogue () {
@@ -53,7 +46,7 @@ public class DialogueController : MonoBehaviour {
         } else {
             _onFinish.Invoke();
             Player.current.Movement.AllowPlayerToMove(true);
-            canvas.gameObject.SetActive(false);
+            _HUDController.dialogueInterface.FinishDialogues();
         }
     }
 
@@ -66,17 +59,14 @@ public class DialogueController : MonoBehaviour {
 
         this.dialogues = dialogues;
         var firstDialogue = getNextDialogue();
+        _HUDController.TransitTo(_HUDController.dialogueInterface);
         SetupDialogues(firstDialogue.avatar, firstDialogue.name, firstDialogue.text);
 
         return true;
     }
 
     public void SetupDialogues(Sprite avatar, string name, string text) {
-        this._textBox.text = text;
-        this._nameBox.text = name;
-        this._imageBox.sprite = avatar;
-
+        _HUDController.dialogueInterface.SetupDialogues(avatar, name, text);
         Player.current.Movement.AllowPlayerToMove(false);
-        canvas.gameObject.SetActive(true);
     }
 }

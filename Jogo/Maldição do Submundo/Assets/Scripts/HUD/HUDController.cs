@@ -1,26 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 using UnityEngine;
 
-public class HUDController : MonoBehaviour {
+public class HUDController : MonoBehaviour 
+{
+    public HUDState _currentState;
+    
+    // States
+    public HUDState defaultState => normalInterface;
 
-    // Health bar
-    public Slider healthBar;
+    [SerializeField] public NormalInterface normalInterface;
+    [SerializeField] public DialogueUI dialogueInterface;
 
     // Start is called before the first frame update
-    void Start() {
-        Player.current.Health.onHeathChange += this.onPlayerHealthChange;
+    private void Start() {
+        TransitTo(normalInterface);
     }
 
-    void onPlayerHealthChange (Health health) {
-        this.updateHealthbar(health.getPercentage());
-    }
-
-    // Update is called once per frame
-    void Update() {}
-
-    void updateHealthbar(float newHealth) {
-        this.healthBar.value = newHealth;
+    public void TransitTo (HUDState state)
+    {
+        _currentState?.OnStateExit();
+        _currentState = state;
+        _currentState.EnterState(this);
     }
 }
