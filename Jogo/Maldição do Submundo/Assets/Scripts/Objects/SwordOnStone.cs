@@ -22,6 +22,7 @@ public class SwordOnStone : MonoBehaviour
 
     private void OnInteract ()
     {
+       // Player.current.GameObject.Transform = new Vector3(44, -26, 0);
         DialogueController
             .current
             .StartDialogues(dialogues, onFinish: _scenesController.changeScene);
