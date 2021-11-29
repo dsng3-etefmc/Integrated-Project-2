@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(Collider2D))]
 public class SpikeTrap : GenericTrap 
 {
@@ -10,12 +11,14 @@ public class SpikeTrap : GenericTrap
     [SerializeField]
     private float time;
 
-    private Animator animator;
+    private Animator _animator;
+    private AudioSource _audioSource;
 
     private bool isDamaging;
 
     void Start() {
-        this.animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(this.StartTrap());
     }
@@ -51,13 +54,18 @@ public class SpikeTrap : GenericTrap
 
     /// <summary>Retract spikes animation</summary>
     void RetractSpikes() {
-        this.animator.SetBool("spikeout", false);
+        this._animator.SetBool("spikeout", false);
         isDamaging = false;
     }
 
     /// <summary>Launch spikes animation</summary>
     void LaunchSpikes() {
-        this.animator.SetBool("spikeout", true);
+        this._animator.SetBool("spikeout", true);
         isDamaging = true;
+    }
+
+    void MakeSoundOnRelease ()
+    {
+        _audioSource.Play();
     }
 }

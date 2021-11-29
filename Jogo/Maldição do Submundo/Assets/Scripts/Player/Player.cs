@@ -11,6 +11,7 @@ using UnityEngine.Playables;
 [RequireComponent(typeof(PlayerAnimation))]
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(PlayerInteracting))]
+[RequireComponent(typeof(PlayerSound))]
 public class Player : MonoBehaviour {
     public static Player current;
 
@@ -24,6 +25,9 @@ public class Player : MonoBehaviour {
     public PlayerAnimation Animation;
     [System.NonSerialized]
     public Collider2D Collider;
+    [System.NonSerialized]
+    public PlayerSound PlayerSound;
+
     private PlayerInteracting Interacting;
 
     private void Awake() { 
@@ -33,10 +37,12 @@ public class Player : MonoBehaviour {
         Animation = GetComponent<PlayerAnimation>();
         Collider = GetComponent<Collider2D>();
         Interacting = GetComponent<PlayerInteracting>();
+        PlayerSound = GetComponent<PlayerSound>();
     }
 
     void Start () {
         Health.onDeath += OnDeath;
+        Health.onHeathChange += _ => PlayerSound.Play(PlayerSound.onHit);
     }
 
     void OnDeath(Health health) {
