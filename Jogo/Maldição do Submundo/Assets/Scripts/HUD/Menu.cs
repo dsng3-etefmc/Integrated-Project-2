@@ -9,9 +9,11 @@ public class Menu : MonoBehaviour
 {
     [SerializeField] private Button _continueButton;
     [SerializeField] private Button _initialMenuButton;
+    [SerializeField] private int _sortingLayer;
 
     private Teleporter _teleporter;
     private CanvasGroup _canvasGroup;
+    private Canvas _canvas;
 
     public bool IsPaused { get; private set; }
 
@@ -19,6 +21,7 @@ public class Menu : MonoBehaviour
     {
         _teleporter = GetComponent<Teleporter>();
         _canvasGroup = GetComponent<CanvasGroup>();
+        _canvas = GetComponent<Canvas>();
 
         Pause(false);
 
@@ -39,6 +42,7 @@ public class Menu : MonoBehaviour
         IsPaused = value;
         Time.timeScale = value ? 0 : 1;
         _canvasGroup.alpha = value ? 1 : 0;
+        _canvas.sortingOrder = value ? _sortingLayer : - _sortingLayer;
     }
 
     void Continue ()

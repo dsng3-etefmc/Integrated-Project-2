@@ -14,17 +14,22 @@ public class NormalInterface : MonoBehaviour, HUDState
         gameObject.SetActive(false);
     }
 
+    void Update ()
+    {
+        _healthBar.value = Player.current.Health.getPercentage();
+    }
+
     public void EnterState(HUDController ctx)
     {
         gameObject.SetActive(true);
-        Player.current.Health.onHeathChange += OnPlayerHealthChange;
+        // Player.current.Health.onHeathChange += OnPlayerHealthChange;
         _ctx = ctx;
     }
 
     public void OnStateExit()
     {
         gameObject.SetActive(false);
-        Player.current.Health.onHeathChange -= OnPlayerHealthChange;
+        // Player.current.Health.onHeathChange -= OnPlayerHealthChange;
     }
 
     void OnPlayerHealthChange (Health health) 

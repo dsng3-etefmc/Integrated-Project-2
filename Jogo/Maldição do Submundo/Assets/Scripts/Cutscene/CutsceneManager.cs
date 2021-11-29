@@ -35,4 +35,10 @@ public class CutsceneManager : MonoBehaviour
     {
         playableDirector = GetComponent<PlayableDirector>();
     }
+
+    public void PlayCutscene (PlayableAsset cutscene)
+    {
+        playableDirector.playableAsset = cutscene;
+        playableDirector.Play();
+    }
 }

@@ -12,6 +12,7 @@ public class HUDController : MonoBehaviour
 
     [SerializeField] public NormalInterface normalInterface;
     [SerializeField] public DialogueUI dialogueInterface;
+    [SerializeField] public DeathScreen deathScreen;
 
     // Start is called before the first frame update
     private void Start() {

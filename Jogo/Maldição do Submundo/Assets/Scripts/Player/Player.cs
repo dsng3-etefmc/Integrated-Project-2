@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 /// <summary>
 /// A Class that englobes general player features like health, avatar, etc...
@@ -13,8 +14,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
     public static Player current;
 
-    // Player sprite
-    public Sprite avatar;
+    [SerializeField] private HUDController _HUDController;
 
     [System.NonSerialized]
     public Health Health;
@@ -36,5 +36,13 @@ public class Player : MonoBehaviour {
     }
 
     void Start () {
+        Health.onDeath += OnDeath;
+    }
+
+    void OnDeath(Health health) {
+        Animation.PlayerDeath();
+        Movement.AllowPlayerToMove(false);
+        Interacting.AllowPlayerToInteract(false);
+        _HUDController.TransitTo(_HUDController.deathScreen);
     }
 }

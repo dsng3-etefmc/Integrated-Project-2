@@ -5,13 +5,22 @@ using UnityEngine;
 
 public class PlayerInteracting : MonoBehaviour
 {
+    private bool _shouldInteract = true;
+
     [SerializeField]
     private float radiousSearch;
 
     private Interactable closestInteractable;
 
+    public void AllowPlayerToInteract (bool value)
+    {
+        _shouldInteract = value;
+    }
+
     void Update ()
     {
+        if (!_shouldInteract) return;
+
         var gotInteractable = SearchForInteractable();
 
         if (gotInteractable != closestInteractable)

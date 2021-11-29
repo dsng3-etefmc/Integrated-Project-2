@@ -20,9 +20,17 @@ public class Health : MonoBehaviour {
     public float maxHealth { get => this._maxHealth; }
     public float minHealth { get => this._minHealth; }
     public float health { get => this._health; }
+    private bool isDead = false;
 
     void Start () {
         refreshHealth();
+    }
+
+    void Update () {
+        if (health <= 0 && !isDead) {
+            onDeath(this);
+            isDead = true;
+        }
     }
 
     public void refreshHealth () {
@@ -53,7 +61,6 @@ public class Health : MonoBehaviour {
 
         // trigger actions
         onHeathChange(this);
-        if (this._health <= 0.01f) onDeath(this);
     }
 
     public event Action<Health> onHeathChange = delegate {};

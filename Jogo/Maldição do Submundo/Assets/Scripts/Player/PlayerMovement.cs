@@ -33,17 +33,15 @@ public class PlayerMovement : MonoBehaviour, IMoveable {
 
     /// <summary>Handles given input</summary>
     void HandleInput() {
-        var inputX = Input.GetAxis(axisName: "Horizontal");
-        var inputY = Input.GetAxis(axisName: "Vertical");
+        var inputX = this.shouldPlayerMove ? Input.GetAxis(axisName: "Horizontal") : 0;
+        var inputY = this.shouldPlayerMove ? Input.GetAxis(axisName: "Vertical") : 0;
 
-        if (this.shouldPlayerMove) {
-            Move(inputX, inputY);
+        Move(inputX, inputY);
 
-            this.SetAnimation(
-                InputToMovement(inputX),
-                InputToMovement(inputY)
-            );
-        }
+        this.SetAnimation(
+            InputToMovement(inputX),
+            InputToMovement(inputY)
+        );
     }
 
     public void RequestStopMoving () {}
@@ -103,8 +101,9 @@ public class PlayerMovement : MonoBehaviour, IMoveable {
         var left = playerMovementX == PlayerTypeMovement.Negative;
         var moving = playerMovementX != PlayerTypeMovement.Null || playerMovementY != PlayerTypeMovement.Null;
 
-        var horizontalDirection = right ? PlayerDirection.Right : PlayerDirection.Null;
-        horizontalDirection = left ? PlayerDirection.Left : horizontalDirection;
+        var horizontalDirection = left|right 
+        ? (right ? PlayerDirection.Right : PlayerDirection.Left)
+        : PlayerDirection.Null;
         this.turnCharacterToDirection(horizontalDirection);
 
         this.animator.SetBool("up", up);
