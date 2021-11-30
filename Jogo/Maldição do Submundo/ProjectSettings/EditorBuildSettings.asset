@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/florestaP2.unity
     guid: 50745d9ee6c952b4a8d1bb81485ad95d
+  - enabled: 1
+    path: Assets/Scenes/casa.unity
+    guid: d3a25367a75978f48b40935e6f07d5f4
   m_configObjects: {}
