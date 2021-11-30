@@ -4,21 +4,36 @@ using UnityEngine;
  
 public class EnemyWalks : MonoBehaviour
 {
-    public float velocidadeDoInimigo;
-    private Transform posicaoDoJogador;
+    [SerializeField] private float enemySpeed;
+    [SerializeField] private float radiousOfSight;
  
     void Start()
     {
-        posicaoDoJogador = GameObject.FindGameObjectWithTag("Player").transform; //detectar a tag do jogador e depois acessa o componente transform
     }
- 
  
     void Update()
     {
-        if(posicaoDoJogador.gameObject != null){
-            //mivimntar o game object ate algum lugar, a segunda parte diz qual é esse lugar 
-            transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeDoInimigo * Time.deltaTime);
- 
+        float distance = Vector2.Distance(Player.current.transform.position, transform.position);
+        if (distance <= radiousOfSight) {
+            MoveToPlayer();
         }
+    }
+
+    void MoveToPlayer()
+    {
+        var playerPos = Player.current.transform.position;
+
+        // Moves enemy towards the player
+        transform.position = Vector2.MoveTowards(
+            transform.position, 
+            playerPos,
+            enemySpeed * Time.deltaTime
+        );
+    }
+
+    void OnDrawGizmosSelected ()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, radiousOfSight);
     }
 }
